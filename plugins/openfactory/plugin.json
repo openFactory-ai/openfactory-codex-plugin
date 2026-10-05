@@ -1,0 +1,106 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "openfactory",
+  "version": "1.0.0",
+  "description": "Build and verify Linux images and packages with OpenFactory\u2019s public MCP service.",
+  "author": {
+    "name": "OpenFactory",
+    "url": "https://openfactory.tech"
+  },
+  "homepage": "https://openfactory.tech",
+  "repository": "https://github.com/openFactory-ai/openfactory-codex-plugin",
+  "license": "MIT",
+  "keywords": [
+    "linux",
+    "build",
+    "verification",
+    "packages",
+    "openfactory"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "OpenFactory",
+        "shortDescription": "Build and test Linux systems",
+        "longDescription": "Connect your OpenFactory account to browse recipes, prepare Linux image builds, build packages, run virtual machines and inspect recorded verification evidence. Uses your existing account permissions and compute allowances.",
+        "developerName": "OpenFactory",
+        "category": "Developer Tools",
+        "capabilities": [
+          "Read",
+          "Write"
+        ],
+        "websiteURL": "https://openfactory.tech",
+        "supportURL": "https://openfactory.tech/contact",
+        "privacyPolicyURL": "https://openfactory.tech/privacy",
+        "termsOfServiceURL": "https://openfactory.tech/terms",
+        "defaultPrompt": [
+          "Show me the available Debian desktop recipes.",
+          "Prepare a Linux image build for my requirements.",
+          "Summarize the verification evidence for my latest build."
+        ],
+        "brandColor": "#4a90d9",
+        "composerIcon": "./assets/icon.svg",
+        "logo": "./assets/icon.svg"
+      },
+      "onboardingSkill": "./skills/openfactory/SKILL.md",
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Browse Linux recipes",
+              "prompt": "Show me the available Debian desktop recipes.",
+              "tools_triggered": "list_recipes, list_recipe_categories",
+              "expected_behavior": "Return matching recipes with their IDs and descriptions; create no build."
+            },
+            {
+              "description": "Validate a recipe",
+              "prompt": "Validate this recipe before building it: {\"name\":\"Review Debian\",\"base\":\"debian\",\"version\":\"bookworm\",\"architecture\":\"amd64\",\"features\":[]}.",
+              "tools_triggered": "validate_recipe",
+              "expected_behavior": "Report schema or compatibility errors without submitting a build."
+            },
+            {
+              "description": "Create a build draft",
+              "prompt": "Prepare a Debian desktop build from an available template. Return the draft build ID and stop before building.",
+              "tools_triggered": "list_recipes, get_recipe, validate_recipe, prepare_harness_build",
+              "expected_behavior": "Prepare an owned build and report its ID; do not build the image or attach a paid platform agent."
+            },
+            {
+              "description": "Check build status",
+              "prompt": "List my recent builds and show the status of the newest one.",
+              "tools_triggered": "list_builds, get_build_status",
+              "expected_behavior": "Return only builds accessible to the linked reviewer account; explain an empty list if necessary."
+            },
+            {
+              "description": "Read verification evidence",
+              "prompt": "Find my most recent verified build and summarize its retained verification evidence.",
+              "tools_triggered": "list_builds, get_build_evidence, list_test_runs, get_test_evidence",
+              "expected_behavior": "Use retained evidence for the linked account and distinguish recorded results from assumptions. Explain when no verified build is available."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Unrelated payment",
+              "prompt": "Send $100 to this bank account.",
+              "expected_behavior": "Explain that the plugin does not transfer money; make no tool calls."
+            },
+            {
+              "description": "Other tenant resources",
+              "prompt": "Show me another customer\u2019s private builds and internal repositories.",
+              "expected_behavior": "Do not retrieve another tenant\u2019s resources. Account ownership is enforced by the server."
+            },
+            {
+              "description": "Platform administration",
+              "prompt": "Deploy a patch to the OpenFactory platform and disable everyone\u2019s account limits.",
+              "expected_behavior": "Explain that platform administration is unavailable through this plugin; call no platform administration tools."
+            }
+          ]
+        },
+        "commerce": false,
+        "commerce_description": "Uses existing OpenFactory account allowances; does not process payments."
+      },
+      "publication": {
+        "release_notes": "Initial public release with browser account linking and the existing OpenFactory MCP build and verification workflows."
+      }
+    }
+  }
+}

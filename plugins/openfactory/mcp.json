@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "openfactory": {
+      "type": "streamable-http",
+      "url": "https://console.openfactory.tech/api/mcp-stream/plugin/mcp"
+    }
+  }
+}
