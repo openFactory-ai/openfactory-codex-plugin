@@ -17,6 +17,11 @@ OpenFactory, review the permissions and choose **Allow**. No API key, Node
 bridge or local MCP server is needed. Your account’s existing permissions and
 compute allowances apply; builds and cloud actions can incur charges.
 
+If you reach OpenFactory's hosted chat or AI allowance, you can continue with
+your own model tokens through this plugin or [direct MCP](https://docs.openfactory.tech/en/reference/mcp).
+Guests need to create a free OpenFactory account first. Separate MCP build
+and compute allowances still apply; supplying tokens does not reset them.
+
 If your client does not prompt automatically, run:
 
 ```sh
