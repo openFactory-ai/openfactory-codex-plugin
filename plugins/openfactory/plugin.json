@@ -40,7 +40,9 @@
         ],
         "brandColor": "#4a90d9",
         "composerIcon": "./assets/icon.svg",
-        "logo": "./assets/icon.svg"
+        "logo": "./assets/icon.svg",
+        "composerIconDark": "./assets/icon-dark.svg",
+        "logoDark": "./assets/icon-dark.svg"
       },
       "onboardingSkill": "./skills/openfactory/SKILL.md",
       "review": {
@@ -54,7 +56,7 @@
             },
             {
               "description": "Validate a recipe",
-              "prompt": "Validate this recipe before building it: {\"name\":\"Review Debian\",\"base\":\"debian\",\"version\":\"bookworm\",\"architecture\":\"amd64\",\"features\":[]}.",
+              "prompt": "Validate this recipe before building it: {\"name\":\"Review Debian\",\"base_image\":\"debian-bookworm\",\"os\":{\"features\":[\"desktop-xfce\",\"firefox\"]}}.",
               "tools_triggered": "validate_recipe",
               "expected_behavior": "Report schema or compatibility errors without submitting a build."
             },
