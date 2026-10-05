@@ -21,11 +21,16 @@ OpenFactory's edge exposes `/.well-known/openai-apps-challenge` when the exact
 portal-provided plaintext is configured as `OPENFACTORY_OPENAI_APPS_CHALLENGE`.
 The challenge value comes from the publishing dashboard.
 
-Provide a dedicated OpenFactory reviewer account with sample builds and
-retained verification evidence. Enter reviewer credentials only in the secure
-dashboard fields. Do not commit them or include them in the ZIP. Record a
-publicly accessible demo showing installation, account linking, browsing,
-build preparation and evidence retrieval; attach it in the portal.
+The dedicated OpenFactory reviewer account has a prepared Debian desktop
+draft. It has no verified image; the evidence test must report that accurately.
+Reviewer credentials are retained privately by the maintainer. Enter them
+only in the secure dashboard fields, never in the ZIP or repository.
+
+Attach the release's `openfactory-demo.mp4`. It shows real browser consent,
+live MCP recipe browsing and validation, the prepared draft's status and
+evidence, and browser revocation. Codex marketplace installation and native
+OAuth login were also verified. ChatGPT installation and the full reviewer
+prompts still need testing through the publisher dashboard.
 
 The manifest supplies five positive and three negative test cases. Run them
 with the reviewer account, resolve automated scan findings, and submit for

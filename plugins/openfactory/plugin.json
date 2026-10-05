@@ -74,7 +74,7 @@
             },
             {
               "description": "Read verification evidence",
-              "prompt": "Find my most recent verified build and summarize its retained verification evidence.",
+              "prompt": "Summarize the retained evidence for my newest build and explain whether it is verified.",
               "tools_triggered": "list_builds, get_build_evidence, list_test_runs, get_test_evidence",
               "expected_behavior": "Use retained evidence for the linked account and distinguish recorded results from assumptions. Explain when no verified build is available."
             }
@@ -101,7 +101,8 @@
         "commerce_description": "Uses existing OpenFactory account allowances; does not process payments."
       },
       "publication": {
-        "release_notes": "Initial public release with browser account linking and the existing OpenFactory MCP build and verification workflows."
+        "release_notes": "Initial public release with browser account linking and the existing OpenFactory MCP build and verification workflows.",
+        "demo_recording_url": "https://github.com/openFactory-ai/openfactory-codex-plugin/releases/download/v1.0.0/openfactory-demo.mp4"
       }
     }
   }

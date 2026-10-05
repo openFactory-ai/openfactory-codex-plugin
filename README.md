@@ -17,6 +17,12 @@ OpenFactory, review the permissions and choose **Allow**. No API key, Node
 bridge or local MCP server is needed. Your account’s existing permissions and
 compute allowances apply; builds and cloud actions can incur charges.
 
+If your client does not prompt automatically, run:
+
+```sh
+codex mcp login openfactory --scopes openfactory --oauth-client-registration dcr
+```
+
 For development, clone this repository and add its directory with
 `codex plugin marketplace add /absolute/path/to/openfactory-codex-plugin`.
 
@@ -47,6 +53,9 @@ GitHub marketplace is a separate installation source.
 
 The manifest includes five positive and three negative reviewer test cases.
 See [submission preparation](SUBMISSION.md) for the remaining portal steps.
+The [release demo](https://github.com/openFactory-ai/openfactory-codex-plugin/releases/download/v1.0.0/openfactory-demo.mp4)
+shows browser consent, live recipe validation, build status, retained evidence,
+and account revocation.
 
 [Website](https://openfactory.tech) · [Support](https://openfactory.tech/contact)
 · [Privacy](https://openfactory.tech/privacy) · [Terms](https://openfactory.tech/terms)
