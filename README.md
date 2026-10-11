@@ -65,4 +65,6 @@ and account revocation.
 [Website](https://openfactory.tech) · [Support](https://openfactory.tech/contact)
 · [Privacy](https://openfactory.tech/privacy) · [Terms](https://openfactory.tech/terms)
 
-MIT licensed. Maintained by OpenFactory.
+The plugin package is MIT licensed. Copyright (c) 2026 OpenFactory Inc.
+Use of the hosted OpenFactory service is governed by the linked terms of
+service and privacy policy.
