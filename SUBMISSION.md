@@ -35,9 +35,11 @@ draft. It has no verified image; the evidence test must report that accurately.
 Reviewer credentials are retained privately by the maintainer. Enter them
 only in the secure dashboard fields, never in the ZIP or repository.
 
-Attach the release's `openfactory-demo.mp4`. It shows real browser consent,
+Use the public website's [reviewer demo](https://openfactory.tech/proofs/openfactory-plugin-demo.mp4).
+It shows real browser consent,
 live MCP recipe browsing and validation, the prepared draft's status and
-evidence, and browser revocation. Codex marketplace installation and native
+evidence, and browser revocation. All supporting-content URLs must be publicly
+accessible on OpenFactory's website; this repository is private. Codex marketplace installation and native
 OAuth login were also verified. ChatGPT installation and the full reviewer
 prompts still need testing through the publisher dashboard.
 

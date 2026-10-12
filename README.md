@@ -58,9 +58,10 @@ GitHub marketplace is a separate installation source.
 
 The manifest includes five positive and three negative reviewer test cases.
 See [submission preparation](SUBMISSION.md) for the remaining portal steps.
-The [release demo](https://github.com/openFactory-ai/openfactory-codex-plugin/releases/download/v1.0.0/openfactory-demo.mp4)
+The [reviewer demo](https://openfactory.tech/proofs/openfactory-plugin-demo.mp4)
 shows browser consent, live recipe validation, build status, retained evidence,
-and account revocation.
+and account revocation. Supporting content is hosted on the public OpenFactory
+website so reviewers do not need access to this private repository.
 
 [Website](https://openfactory.tech) · [Support](https://openfactory.tech/contact)
 · [Privacy](https://openfactory.tech/privacy) · [Terms](https://openfactory.tech/terms)
