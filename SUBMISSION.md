@@ -35,7 +35,7 @@ draft. It has no verified image; the evidence test must report that accurately.
 Reviewer credentials are retained privately by the maintainer. Enter them
 only in the secure dashboard fields, never in the ZIP or repository.
 
-Use the public website's [reviewer demo](https://openfactory.tech/proofs/openfactory-plugin-demo.mp4).
+Use the public website's [reviewer demo](https://openfactory.tech/proofs/openfactory-plugin-demo.webm).
 It shows real browser consent,
 live MCP recipe browsing and validation, the prepared draft's status and
 evidence, and browser revocation. All supporting-content URLs must be publicly
