@@ -16,13 +16,23 @@ cases. Direct MCP checks cover Debian recipe browsing, recipe validation,
 draft preparation, account build status and missing verification evidence. The
 fresh reviewer draft is `a50a48bc-ca04-4a0d-9ad4-5f537dd4342a`; it stopped at
 worktree preparation, with image inputs not started and no image or test runs.
-Platform administration
+After the check, the QA draft was cancelled to release its active reservation;
+its record and history remain available. Platform administration
 tools and caller-supplied identity arguments are absent. These checks do not
 replace running the eight prompts in ChatGPT or the dashboard's automated scans.
 
-The domain challenge endpoint still returns HTTP 404: the exact challenge
-token must be copied from the publishing dashboard before domain verification
-can finish. No OpenAI dashboard submission or approval has been verified.
+The dashboard challenge token has been received and saved in the local
+persistent service configuration. The local challenge endpoint returns HTTP
+200 with the exact plaintext token. The public AWS frontend still returns
+HTTP 404; its configuration update is queued behind the shared deployment
+lock while another platform deployment drains active test sessions. A
+persistent service will apply the token, complete the AWS rollout and check
+the exact public response when the lock becomes available. Its result is
+recorded in the maintainer's local evidence directory at
+`../test-evidence/plugin-submission-20261012/domain-challenge-deployment.json`.
+Domain verification in the dashboard remains pending. No OpenAI dashboard
+submission or approval has been verified. This configuration change requires
+no new plugin ZIP.
 
 ## Finish in the publishing dashboard
 
