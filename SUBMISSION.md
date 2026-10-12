@@ -1,5 +1,31 @@
 # Public directory submission
 
+## Verified package and live service (2026-10-12)
+
+The current upload is `dist/openfactory-1.0.5.zip` (SHA-256
+`e06d55605e00784de0e3343a50f2c34837d8a7a0625e022b5c6c5dd5ffe026ad`).
+Its contents match the source package, include both theme icons and all eight
+review cases, and exclude reviewer credentials and private repository links.
+The public WebM and MP4 demos return HTTP 200 and match the website source
+files. The updated OAuth privacy policy, terms and contact pages are live.
+
+The dedicated reviewer account passes password sign-in, browser-session
+sign-in, OAuth dynamic registration with PKCE, and MCP initialization. The
+live service exposes 173 tools, including every tool named in the positive
+cases. Direct MCP checks cover Debian recipe browsing, recipe validation,
+draft preparation, account build status and missing verification evidence. The
+fresh reviewer draft is `a50a48bc-ca04-4a0d-9ad4-5f537dd4342a`; it stopped at
+worktree preparation, with image inputs not started and no image or test runs.
+Platform administration
+tools and caller-supplied identity arguments are absent. These checks do not
+replace running the eight prompts in ChatGPT or the dashboard's automated scans.
+
+The domain challenge endpoint still returns HTTP 404: the exact challenge
+token must be copied from the publishing dashboard before domain verification
+can finish. No OpenAI dashboard submission or approval has been verified.
+
+## Finish in the publishing dashboard
+
 Upload the release ZIP at https://platform.openai.com/plugins using a verified
 OpenFactory publishing organization. The uploader needs organization ownership
 or Apps Management write access. Choose **With MCP** and connect:
