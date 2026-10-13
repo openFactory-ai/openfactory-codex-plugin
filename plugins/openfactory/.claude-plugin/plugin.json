@@ -1,0 +1,25 @@
+{
+  "name": "openfactory",
+  "displayName": "OpenFactory",
+  "version": "1.0.6",
+  "description": "Build custom Linux OS images from recipes and test them in virtual machines with your OpenFactory account.",
+  "author": {
+    "name": "OpenFactory",
+    "url": "https://openfactory.tech"
+  },
+  "homepage": "https://docs.openfactory.tech/en/reference/mcp",
+  "repository": "https://github.com/openFactory-ai/openfactory-codex-plugin",
+  "license": "MIT",
+  "keywords": ["linux", "os-image", "build", "virtual-machines", "verification"],
+  "icon": "./assets/icon.png",
+  "documentationUrl": "https://docs.openfactory.tech/en/reference/mcp",
+  "supportUrl": "https://openfactory.tech/contact",
+  "privacyPolicyUrl": "https://openfactory.tech/privacy",
+  "termsOfServiceUrl": "https://openfactory.tech/terms",
+  "mcpServers": {
+    "openfactory": {
+      "type": "http",
+      "url": "https://console.openfactory.tech/api/mcp-stream/plugin/mcp"
+    }
+  }
+}
