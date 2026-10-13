@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "openfactory",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Build and verify Linux images and packages with OpenFactory\u2019s public MCP service.",
   "author": {
     "name": "OpenFactory",
@@ -34,7 +34,7 @@
         "termsOfServiceURL": "https://openfactory.tech/terms",
         "defaultPrompt": [
           "Show me the available Debian desktop recipes.",
-          "Prepare a Linux image build for my requirements.",
+          "Create a Linux image build draft for my requirements.",
           "Summarize the verification evidence for my latest build."
         ],
         "brandColor": "#4a90d9",
@@ -61,9 +61,9 @@
             },
             {
               "description": "Create a build draft",
-              "prompt": "Prepare a Debian desktop build from an available template. Return the draft build ID and stop before building.",
-              "tools_triggered": "list_recipes, get_recipe, validate_recipe, prepare_harness_build",
-              "expected_behavior": "Prepare an owned build and report its ID; do not build the image or attach a paid platform agent."
+              "prompt": "Create a Debian desktop build from an available template. Return the draft build ID and stop before building the image.",
+              "tools_triggered": "list_recipes, get_recipe, validate_recipe, create_build",
+              "expected_behavior": "Create an owned build and report its ID; do not call build_image."
             },
             {
               "description": "Check build status",
@@ -101,7 +101,7 @@
         "demo_recording_url": "https://openfactory.tech/proofs/openfactory-plugin-demo.webm"
       },
       "publication": {
-        "release_notes": "Host the reviewer demo on the public OpenFactory website in a browser-compatible format and remove the private repository link from package metadata."
+        "release_notes": "Align the tool surface with the app review scan: the plugin now covers Linux image build and test only, publishes guest-agent operations as separate tools, and its responses and served guide no longer mention plans, upgrades or checkout."
       }
     }
   }
