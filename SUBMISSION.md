@@ -21,9 +21,10 @@ annotations, and responses and a served build guide that never promote plans,
 upgrades or checkout (monorepo `docs/guides/public-plugin.md`). After the
 service deploy, rescan tools in the dashboard and upload this ZIP.
 
-The reviewer demo predates these changes. It shows recipe browsing,
-validation, a draft's status and evidence and browser revocation, which still
-apply. The draft in it came from the tool the plugin no longer offers.
+The reviewer demo was re-recorded on 2026-10-13 against this deployed surface.
+It follows the review cases: Codex's browser consent, recipe browsing and
+validation, a draft created with `create_build`, its status and evidence, and
+browser revocation, after which the same token gets HTTP 401.
 
 ## Finish in the publishing dashboard
 
@@ -57,15 +58,16 @@ OpenFactory's edge exposes `/.well-known/openai-apps-challenge` when the exact
 portal-provided plaintext is configured as `OPENFACTORY_OPENAI_APPS_CHALLENGE`.
 The challenge value comes from the publishing dashboard.
 
-The dedicated OpenFactory reviewer account has a prepared Debian desktop
-draft. It has no verified image; the evidence test must report that accurately.
+The dedicated OpenFactory reviewer account has Debian desktop drafts; the
+newest was created in the demo. None has a verified image; the evidence test
+must report that accurately.
 Reviewer credentials are retained privately by the maintainer. Enter them
 only in the secure dashboard fields, never in the ZIP or repository.
 
 Use the public website's [reviewer demo](https://openfactory.tech/proofs/openfactory-plugin-demo.webm).
 It shows real browser consent,
-live MCP recipe browsing and validation, the prepared draft's status and
-evidence, and browser revocation. All supporting-content URLs must be publicly
+live MCP recipe browsing and validation, a draft created with `create_build`,
+its status and evidence, and browser revocation. All supporting-content URLs must be publicly
 accessible on OpenFactory's website; this repository is private. Codex marketplace installation and native
 OAuth login were also verified. ChatGPT installation and the full reviewer
 prompts still need testing through the publisher dashboard.

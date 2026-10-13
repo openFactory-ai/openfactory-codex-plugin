@@ -59,9 +59,10 @@ GitHub marketplace is a separate installation source.
 The manifest includes five positive and three negative reviewer test cases.
 See [submission preparation](SUBMISSION.md) for the remaining portal steps.
 The [reviewer demo](https://openfactory.tech/proofs/openfactory-plugin-demo.webm)
-shows browser consent, live recipe validation, build status, retained evidence,
-and account revocation. Supporting content is hosted on the public OpenFactory
-website so reviewers do not need access to this private repository.
+shows browser consent, live recipe validation, draft creation, build status,
+retained evidence, and account revocation. Supporting content is hosted on the
+public OpenFactory website so reviewers do not need access to this private
+repository.
 
 [Website](https://openfactory.tech) · [Support](https://openfactory.tech/contact)
 · [Privacy](https://openfactory.tech/privacy) · [Terms](https://openfactory.tech/terms)
