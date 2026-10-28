@@ -22,11 +22,10 @@ your own model tokens through this plugin or [direct MCP](https://docs.openfacto
 Guests need to create a free OpenFactory account first. Separate MCP build
 and compute allowances still apply; supplying tokens does not reset them.
 
-If your client does not prompt automatically, run:
-
-```sh
-codex mcp login openfactory --scopes openfactory --oauth-client-registration dcr
-```
+If your client does not prompt automatically, open Codex, run `/mcp`, and
+connect the OpenFactory server. `codex mcp login` manages separately configured
+MCP entries and does not discover servers installed by a plugin. OAuth client
+registration, endpoints and scopes come from OpenFactory's discovery metadata.
 
 For development, clone this repository and add its directory with
 `codex plugin marketplace add /absolute/path/to/openfactory-codex-plugin`.

@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "openfactory",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Build and verify Linux images and packages with OpenFactory\u2019s public MCP service.",
   "author": {
     "name": "OpenFactory",
@@ -101,7 +101,7 @@
         "demo_recording_url": "https://openfactory.tech/proofs/openfactory-plugin-demo.webm"
       },
       "publication": {
-        "release_notes": "Align the tool surface with the app review scan: the plugin now covers Linux image build and test only, publishes guest-agent operations as separate tools, and its responses and served guide no longer mention plans, upgrades or checkout."
+        "release_notes": "Restore native Codex MCP discovery by using the portable MCP transport fields and the service's OAuth discovery metadata. Correct the plugin account-connection instructions."
       }
     }
   }

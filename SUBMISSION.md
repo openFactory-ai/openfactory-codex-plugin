@@ -2,13 +2,14 @@
 
 OpenAI (ChatGPT and Codex) first; the Claude directory is at the end.
 
-## Current package and service (2026-10-13)
+## Current package and service (2026-10-28)
 
-The current upload is `dist/openfactory-1.0.6.zip` (SHA-256
-`30e940d91f869fa0362c3a5321fbe603972945013a999dc4c31d56b827625414`). It
-replaces 1.0.5: the draft-build review case now uses `create_build`, which the
-plugin offers, instead of `prepare_harness_build`, which it no longer offers,
-and the onboarding skill no longer discusses account tiers or allowances.
+The current package is `dist/openfactory-1.0.7.zip`. It replaces 1.0.6 and
+restores native Codex MCP discovery. Codex 0.165.0 rejects per-server
+`extensions` in portable `mcp.json`, leaving the plugin installed with no MCP
+servers. The package now uses portable transport fields; OAuth registration,
+endpoints and scopes are discovered from the protected service. The reviewer
+test cases and onboarding skill are retained.
 
 Domain verification passed on 2026-10-13. The challenge token is set both in
 the local service configuration and in the public console's AWS container
@@ -38,22 +39,20 @@ or Apps Management write access. Choose **With MCP** and connect:
 https://console.openfactory.tech/api/mcp-stream/plugin/mcp
 ```
 
-The packaged `mcp.json` declares OAuth with dynamic client registration and
-the `openfactory` scope. The portal imports these settings from the ZIP;
-check them under **MCPs** before connecting. Discovery supplies the OAuth
-endpoints, public client authentication (`none`), authorization-code flow
-and PKCE S256.
+Under **MCPs**, select OAuth with dynamic client registration and the
+`openfactory` scope. Check the imported connection before submitting.
+Discovery supplies the OAuth endpoints, public client authentication (`none`),
+authorization-code flow and PKCE S256.
 The authorization server is
 `https://console.openfactory.tech/api/mcp-oauth`. Discovery endpoints are:
 
 - `https://console.openfactory.tech/.well-known/oauth-authorization-server/api/mcp-oauth`
 - `https://console.openfactory.tech/.well-known/oauth-protected-resource/api/mcp-stream/plugin/mcp`
 
-The auth extension follows [OpenAI's MCP authentication format](https://developers.openai.com/plugins/build/plugins#configure-mcp-authentication).
-The public Agent Plugins 1.0.0 MCP JSON schema currently rejects per-server
-extensions, including this documented OpenAI extension. Validate the imported
-auth settings in the OpenAI portal; generic schema validation alone cannot
-confirm submission compatibility.
+The [documented OpenAI auth extension](https://developers.openai.com/plugins/build/plugins#configure-mcp-authentication)
+is not included because current Codex and the portable MCP schema reject it.
+Configure authentication in the submission portal and verify the real native
+client flow; package schema validation alone does not prove sign-in works.
 
 Complete the portal's ownership challenge on `console.openfactory.tech`.
 OpenFactory's edge exposes `/.well-known/openai-apps-challenge` when the exact

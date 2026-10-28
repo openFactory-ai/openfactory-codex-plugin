@@ -1,7 +1,7 @@
 {
   "name": "openfactory",
   "displayName": "OpenFactory",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Build custom Linux OS images from recipes and test them in virtual machines with your OpenFactory account.",
   "author": {
     "name": "OpenFactory",
