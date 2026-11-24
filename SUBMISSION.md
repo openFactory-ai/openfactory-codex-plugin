@@ -2,14 +2,15 @@
 
 OpenAI (ChatGPT and Codex) first; the Claude directory is at the end.
 
-## Current package and service (2026-10-28)
+## Current package and service (2026-11-23)
 
-The current package is `dist/openfactory-1.0.7.zip`. It replaces 1.0.6 and
-restores native Codex MCP discovery. Codex 0.165.0 rejects per-server
-`extensions` in portable `mcp.json`, leaving the plugin installed with no MCP
-servers. The package now uses portable transport fields; OAuth registration,
-endpoints and scopes are discovered from the protected service. The reviewer
-test cases and onboarding skill are retained.
+The current package is `dist/openfactory-1.0.8.zip`. It replaces 1.0.7, which
+restored native Codex MCP discovery, and adds Claude Code marketplace install,
+docs pointers and an MCP Registry `server.json`. Codex 0.165.0 rejects
+per-server `extensions` in portable `mcp.json`, leaving the plugin installed
+with no MCP servers. The package uses portable transport fields; OAuth
+registration, endpoints and scopes are discovered from the protected service.
+The reviewer test cases and onboarding skill are retained.
 
 Domain verification passed on 2026-10-13. The challenge token is set both in
 the local service configuration and in the public console's AWS container

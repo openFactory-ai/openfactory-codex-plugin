@@ -1,0 +1,30 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "tech.openfactory/openfactory",
+  "title": "OpenFactory",
+  "description": "Build custom Linux OS images from recipes and test them in VMs with your OpenFactory account.",
+  "version": "1.0.8",
+  "websiteUrl": "https://docs.openfactory.tech/en/reference/mcp",
+  "repository": {
+    "url": "https://github.com/openFactory-ai/openfactory-codex-plugin",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://console.openfactory.tech/api/mcp-stream/plugin/mcp"
+    },
+    {
+      "type": "streamable-http",
+      "url": "https://console.openfactory.tech/mcp-stream/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Optional: Bearer of_mcp_… OpenFactory MCP key for the full tool set; omit to run as a guest",
+          "isRequired": false,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

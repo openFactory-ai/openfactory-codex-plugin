@@ -5,6 +5,20 @@ them in virtual machines. This plugin connects Claude to your OpenFactory
 account so you can browse and validate recipes, create builds, compile and
 verify images, drive and inspect the test VMs, and download finished ISOs.
 
+## Install
+
+```sh
+claude plugin marketplace add openFactory-ai/openfactory-codex-plugin
+claude plugin install openfactory@openfactory
+```
+
+Or inside a Claude Code session:
+
+```
+/plugin marketplace add openFactory-ai/openfactory-codex-plugin
+/plugin install openfactory@openfactory
+```
+
 ## What the plugin contains
 
 - One remote MCP server, `https://console.openfactory.tech/api/mcp-stream/plugin/mcp`,
@@ -35,6 +49,7 @@ before running them. Builds and VMs use your account's compute allowances.
 ## Links
 
 - Documentation: https://docs.openfactory.tech/en/reference/mcp
+  (agent index: https://docs.openfactory.tech/llms.txt)
 - Support: https://openfactory.tech/contact
 - Privacy policy: https://openfactory.tech/privacy
 - Terms of service: https://openfactory.tech/terms

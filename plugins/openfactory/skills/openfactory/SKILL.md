@@ -11,6 +11,9 @@ For an image or package build, first call
 `get_harness_skill(name="openfactory-compute")` and use its current workflow.
 Fetch companion resources with `get_harness_skill` only as needed. OpenFactory
 maintains the build workflow on the server; this plugin does not copy it.
+For setup, install or how-to questions about OpenFactory itself, fetch
+https://docs.openfactory.tech/llms.txt (index) or
+https://docs.openfactory.tech/llms-full.txt (all docs).
 
 Work within the user's requested scope and existing account limits. Distinguish
 creating a draft build from building its image. Build and verification calls

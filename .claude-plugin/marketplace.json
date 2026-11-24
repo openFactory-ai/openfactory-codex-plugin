@@ -1,0 +1,17 @@
+{
+  "name": "openfactory",
+  "owner": {
+    "name": "OpenFactory",
+    "url": "https://openfactory.tech"
+  },
+  "metadata": {
+    "description": "OpenFactory plugins for building and testing custom Linux OS images."
+  },
+  "plugins": [
+    {
+      "name": "openfactory",
+      "source": "./plugins/openfactory",
+      "description": "Build custom Linux OS images from recipes and test them in virtual machines with your OpenFactory account."
+    }
+  ]
+}

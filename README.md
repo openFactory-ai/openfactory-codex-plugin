@@ -30,6 +30,42 @@ registration, endpoints and scopes come from OpenFactory's discovery metadata.
 For development, clone this repository and add its directory with
 `codex plugin marketplace add /absolute/path/to/openfactory-codex-plugin`.
 
+## Install in Claude Code
+
+```sh
+claude plugin marketplace add openFactory-ai/openfactory-codex-plugin
+claude plugin install openfactory@openfactory
+```
+
+Or add only the connector, then sign in with `/mcp`:
+
+```sh
+claude mcp add --transport http openfactory https://console.openfactory.tech/api/mcp-stream/plugin/mcp
+```
+
+## API key instead of sign-in
+
+For headless agents, CI or the full tool set, use an OpenFactory MCP key
+(`of_mcp_…`) with the key endpoint `https://console.openfactory.tech/mcp-stream/mcp`.
+
+Claude Code:
+
+```sh
+claude mcp add --transport http openfactory https://console.openfactory.tech/mcp-stream/mcp --header "Authorization: Bearer of_mcp_YOUR_KEY"
+```
+
+Codex:
+
+```sh
+export OPENFACTORY_MCP_KEY=of_mcp_YOUR_KEY
+codex mcp add openfactory --url https://console.openfactory.tech/mcp-stream/mcp --bearer-token-env-var OPENFACTORY_MCP_KEY
+```
+
+## Docs
+
+Install page: https://docs.openfactory.tech/en/reference/mcp. Docs index for
+agents: https://docs.openfactory.tech/llms.txt.
+
 ## Use
 
 Try “Show me the available Debian desktop recipes,” “Prepare a Linux image
