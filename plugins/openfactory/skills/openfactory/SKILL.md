@@ -16,8 +16,17 @@ https://docs.openfactory.tech/llms.txt (index) or
 https://docs.openfactory.tech/llms-full.txt (all docs).
 
 Work within the user's requested scope and existing account limits. Distinguish
-creating a draft build from building its image. Build and verification calls
-may run for a long time; use status and retained evidence before deciding to
-retry.
+creating a draft build from building its image.
+
+You drive the build: the recipe delivers packages and repositories, and you
+write everything else the image needs with `write_build_config`. Check the
+booted test machine against what the user asked for, fix every difference in one
+change, and build again until it all holds. A defect you can still edit is not a
+reason to stop, and a verification run the platform itself failed says nothing
+about the image. The guide has the full list of what you can change and when to
+stop.
+
+Build and verification calls start work that continues on the server; poll
+status, and read the retained evidence before deciding what to change.
 Report build IDs, artifact links and recorded verification results when
 available. Never describe an unverified image as verified.

@@ -4,7 +4,7 @@ OpenAI (ChatGPT and Codex) first; the Claude directory is at the end.
 
 ## Current package and service (2026-11-23)
 
-The current package is `dist/openfactory-1.0.8.zip`. It replaces 1.0.7, which
+The current package is `dist/openfactory-1.0.9.zip`. It replaces 1.0.8 and 1.0.7, which
 restored native Codex MCP discovery, and adds Claude Code marketplace install,
 docs pointers and an MCP Registry `server.json`. Codex 0.165.0 rejects
 per-server `extensions` in portable `mcp.json`, leaving the plugin installed
@@ -19,7 +19,7 @@ server is connected in the dashboard with OAuth.
 
 The dashboard's automated scan then flagged the server instructions, several
 annotations, descriptions written for other surfaces and multi-operation
-tools. The service now publishes a 93-tool Linux image build-and-test surface
+tools. The service now publishes a 98-tool Linux image build-and-test surface
 with its own instructions, one guest-agent tool per operation, corrected
 annotations, and responses and a served build guide that never promote plans,
 upgrades or checkout (monorepo `docs/guides/public-plugin.md`). After the
