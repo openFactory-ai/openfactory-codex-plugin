@@ -2,9 +2,16 @@
 
 OpenAI (ChatGPT and Codex) first; the Claude directory is at the end.
 
-## Current package and service (2026-11-23)
+## Current package and service (2026-11-25)
 
-The current package is `dist/openfactory-1.0.9.zip`. It replaces 1.0.8 and 1.0.7, which
+1.0.10 (2026-11-25) gives Codex a native manifest in the repository: Codex 0.172 caps an
+Agent Plugins manifest's MCP tools at 64 KB, counting the server instructions again for
+every tool, so only about 27 of 98 OpenFactory tools reached the model and an agent wrote a
+script to reach the rest. The Agent Plugins manifest moved to `packaging/openai`, and
+`dist/openfactory-1.0.10.zip` has the same contents as before with it at the root. The
+OpenAI-distributed package still meets that cap in Codex.
+
+The previous package was `dist/openfactory-1.0.9.zip`. It replaced 1.0.8 and 1.0.7, which
 restored native Codex MCP discovery, and adds Claude Code marketplace install,
 docs pointers and an MCP Registry `server.json`. Codex 0.165.0 rejects
 per-server `extensions` in portable `mcp.json`, leaving the plugin installed
@@ -167,7 +174,7 @@ Test & launch instructions:
 
 The plugin folder `plugins/openfactory` serves both directories: Claude reads
 `.claude-plugin/plugin.json` (the remote MCP server above plus listing links)
-and `README.md`, Codex reads `plugin.json` and `mcp.json`, and both load
+and `README.md`, Codex reads `.codex-plugin/plugin.json` and `.mcp.json`, and both load
 `skills/openfactory`. `claude plugin validate --strict ./plugins/openfactory`
 passes. The repository is public, so the portal needs only your GitHub
 account connected on claude.ai with push access.
@@ -177,7 +184,7 @@ account connected on claude.ai with push access.
 | Repository | `openFactory-ai/openfactory-codex-plugin` |
 | Plugin path | `plugins/openfactory` |
 | Branch | `main` |
-| Listing details | Read from `plugin.json` and `README.md`; change them there and re-validate. |
+| Listing details | Read from `.claude-plugin/plugin.json` and `README.md`; change them there and re-validate. |
 | Personal data | Read through its declared connector only (the signed-in account's builds, recipes, VMs and evidence); the plugin itself stores nothing. |
 | Other services | None beyond the declared connector. |
 | Retention | The plugin keeps nothing; OpenFactory retains account data as its privacy policy describes. |

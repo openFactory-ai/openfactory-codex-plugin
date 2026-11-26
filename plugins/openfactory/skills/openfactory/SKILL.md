@@ -4,6 +4,9 @@ description: Build and verify Linux images and packages using your linked OpenFa
 ---
 
 Use the OpenFactory tools for the user's requested build or verification work.
+If they are not listed yet, the server is still connecting: they appear on a
+later step. Do not reach the OpenFactory service around your client with
+scripts, curl or another client process.
 Account linking happens in the client's browser connection flow. Credentials
 come from that connection; do not ask for API keys or pass identity arguments.
 

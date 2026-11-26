@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "openfactory": {
+      "type": "http",
+      "url": "https://console.openfactory.tech/api/mcp-stream/plugin/mcp"
+    }
+  }
+}

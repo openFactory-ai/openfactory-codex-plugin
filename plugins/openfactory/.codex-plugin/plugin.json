@@ -1,0 +1,37 @@
+{
+  "name": "openfactory",
+  "version": "1.0.10",
+  "description": "Build and verify Linux images and packages with OpenFactory’s public MCP service.",
+  "keywords": [
+    "linux",
+    "build",
+    "verification",
+    "packages",
+    "openfactory"
+  ],
+  "skills": "./skills",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "OpenFactory",
+    "shortDescription": "Build and test Linux systems",
+    "longDescription": "Connect your OpenFactory account to browse recipes, prepare Linux image builds, build packages, run virtual machines and inspect recorded verification evidence. Uses your existing account permissions and compute allowances.",
+    "developerName": "OpenFactory",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://openfactory.tech",
+    "privacyPolicyURL": "https://openfactory.tech/privacy",
+    "termsOfServiceURL": "https://openfactory.tech/terms",
+    "defaultPrompt": [
+      "Show me the available Debian desktop recipes.",
+      "Create a Linux image build draft for my requirements.",
+      "Summarize the verification evidence for my latest build."
+    ],
+    "brandColor": "#4a90d9",
+    "composerIcon": "./assets/icon.svg",
+    "logo": "./assets/icon.svg",
+    "logoDark": "./assets/icon-dark.svg"
+  }
+}

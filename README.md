@@ -85,9 +85,12 @@ repositories. Connections expire after 30 days; reconnect when prompted.
 
 ## ChatGPT and public distribution
 
-The portable package is under [`plugins/openfactory`](plugins/openfactory).
-Release ZIPs have `plugin.json` at their root and can be uploaded through the
-[OpenAI plugin submission portal](https://platform.openai.com/plugins).
+The plugin is under [`plugins/openfactory`](plugins/openfactory). Codex reads
+its native manifest (`.codex-plugin/plugin.json`, `.mcp.json`): Codex caps an
+Agent Plugins manifest's MCP tools at 64 KB, which hid most of OpenFactory's.
+`make package` builds the release ZIP for the
+[OpenAI plugin submission portal](https://platform.openai.com/plugins) with the
+Agent Plugins `plugin.json` and `mcp.json` from `packaging/openai` at its root.
 Public directory availability depends on OpenAI review and publication. The
 GitHub marketplace is a separate installation source.
 
